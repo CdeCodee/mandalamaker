@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+}
+
+.mandala {
+    position: absolute;
+    top: 0; left: 25px;
+    width: 800px; height: 800px;
+    background-color: #1e1e1e;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.mandala .base {
+    pointer-events: none;
+    position: absolute;
+    left: 0; top: 0;
+    width: 800px; height: 800px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.mandala .base.show {
+    opacity: 1;
+}
+
+.mandala .draw {
+    cursor: crosshair;
+    position: absolute;
+    left: 0; top: 0;
+    width: 800px; height: 800px;
+    border-radius: 50%;
+}
+
+.controllers {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    padding: 0 1em 0 850px;
+    width: 1200px;
+    user-select: none;
+    color: #fff;
+}
+
+.control {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    padding: 1em 0;
+    border-bottom: 1px solid #333;
+}
+
+.input, .color {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    height: 2.5em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+label {
+    display: block;
+    margin-top: 0.5em;
+}
+
+.buttons button {
+    font-size: 1em;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}

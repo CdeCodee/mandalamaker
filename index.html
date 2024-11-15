@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandala Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="controllers">
+            <div class="control">
+                Partes<br>
+                <input class="input" type="number" name="parts" min="2" max="24" step="2" value="12">
+            </div>
+
+            <div class="control">
+                Color<br>
+                <input class="color" type="color" name="color" value="#ff0000">
+            </div>
+
+            <div class="control">
+                Tamaño del pincel<br>
+                <input class="input" type="number" name="width" min="1" max="10" step="1" value="2">
+            </div>
+
+            <div class="control">
+                <label>
+                    <input type="checkbox" onchange="setGrid(this);" checked>
+                    Cuadricula
+                </label>
+                <label>
+                    <input type="checkbox" onchange="setMirrored(this);" checked>
+                    Reflejo
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button onclick="clearCanvas();">
+                    Limpiar
+                </button>
+                <button onclick="download()">
+                    Descargar
+                </button>
+            </div>
+        </div>
+
+        <div class="mandala">
+            <canvas class="draw"></canvas>
+            <canvas class="base show"></canvas>
+        </div>
+    </div>
+</body>
+</html>
